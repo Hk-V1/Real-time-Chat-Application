@@ -38,7 +38,6 @@ This project replicates and extends WhatsApp’s real-time messaging capabilitie
 - **FastAPI** – High-performance Python web framework
 - **Socket.IO (Python Server)** – WebSocket real-time engine
 - **JWT Auth** – Secure token-based authentication
-- **Async SQL/ORM** – Efficient non-blocking DB interaction (e.g., Tortoise ORM or SQLModel)
 
 ### Infrastructure
 - **PostgreSQL / Redis** – Persistent storage and in-memory caching
@@ -94,12 +93,10 @@ This project replicates and extends WhatsApp’s real-time messaging capabilitie
 
 ## LLaMA AI Integration
 
-The LLaMA model runs as a service and is connected to the backend via HTTP/gRPC. It handles:
+The LLaMA model runs as a service and is connected to the backend via HTTP. It handles:
 - Smart replies
 - Help commands
 - AI chat suggestions in group or 1:1 chats
-
-Make sure to configure model loading parameters and GPU availability if running locally.
 
 ---
 
@@ -107,19 +104,19 @@ Make sure to configure model loading parameters and GPU availability if running 
 
 ```bash
 chat-app/
-├── frontend/                  # Next.js + Tailwind + Socket.IO client
+├── frontend/                  
 │   ├── pages/
 │   ├── components/
 │   ├── styles/
 │   └── utils/
-├── backend/                   # FastAPI + Socket.IO server
+├── backend/                   
 │   ├── app/
 │   ├── models/
 │   ├── routes/
 │   ├── ai_assistant/
 │   └── database/
-├── llama-service/             # Optional: LLaMA inference server
-├── infra/                     # Deployment configs, Docker, etc.
+├── llama-service/             
+├── infra/                     
 └── README.md
 ```
 
